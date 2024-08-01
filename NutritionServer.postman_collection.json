@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "e7cdda33-1a8d-4bef-807a-f75e7cf81a2b",
+		"name": "NutritionServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30364163"
+	},
+	"item": [
+		{
+			"name": "generate_diet_plan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"hassan22hegazy@gmail.com\",\r\n    \"name\": \"John Doe\",\r\n    \"age\": 30,\r\n    \"gender\": \"Male\",\r\n     \"weight\": 75.5,\r\n     \"height\": 1.80,\r\n    \"diseases\": [\"Hypertension\"],\r\n     \"bloodPressure\": 120.80,\r\n    \"email\": \"john.doe@example.com\",\r\n     \"bloodType\": \"O+\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:18080/generate_diet_plan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "18080",
+					"path": [
+						"generate_diet_plan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "receive_feedback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dietPlanId\": 20240731,\r\n    \"feedbackRate\":3,\r\n    \"feedbackNotes\": \"Good\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:18080/receive_feedback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "18080",
+					"path": [
+						"receive_feedback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "analyze_data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:18080/analyze_data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "18080",
+					"path": [
+						"analyze_data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:18080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "18080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserPlans",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"hassan22hegazy@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:18080/get_user_plans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "18080",
+					"path": [
+						"get_user_plans"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
